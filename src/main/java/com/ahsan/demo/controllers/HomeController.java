@@ -19,7 +19,7 @@ public class HomeController {
 	
 	@GetMapping("/register")
 	public String home() {
-		return "register";
+		return "registration";
 	}
 }
 	
