@@ -21,7 +21,7 @@ public class SecurityConfig {
 	private MyUserDetailsService myUserDetailsService;
 	
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 			.csrf().disable()
         	.authorizeHttpRequests((authz) -> authz
@@ -36,17 +36,6 @@ public class SecurityConfig {
 		
 		return http.build();	
 	}
-	
-	
-//	@Bean
-//  public InMemoryUserDetailsManager userDetailsService() {
-//		final Properties users = new Properties();
-//      users.put("ahsan",passwordEncoder().encode("ahsan123")+",USER,enabled");
-//      users.put("ali",passwordEncoder().encode("ali123")+",USER,enabled");
-//		
-//      return new InMemoryUserDetailsManager(users);
-//    }
-	
 	
 	
 	@Bean

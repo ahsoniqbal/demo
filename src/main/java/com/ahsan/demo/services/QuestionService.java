@@ -17,20 +17,6 @@ public class QuestionService {
 	private QuestionRepo questionRepo;
 	
 	public List<Question> getAllQuestion(){
-		return (List<Question>)questionRepo.findAll();
+		return questionRepo.findAll();
 	}
-	
-	
-	public Optional<Question> getQuestion(Integer id) throws IllegalArgumentException{
-		return questionRepo.findById(id);
-	}
-	
-	public Question addQuestion(Question ques) throws IllegalArgumentException{
-		if(ques!=null) {
-			return questionRepo.save(ques);
-		}
-		throw new IllegalArgumentException("Question cannot be null");
-	}
-	
-	
 }

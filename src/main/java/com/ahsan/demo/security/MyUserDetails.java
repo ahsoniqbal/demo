@@ -11,15 +11,14 @@ import com.ahsan.demo.models.User;
 
 public class MyUserDetails implements UserDetails{
 
-	
+	private static final long serialVersionUID = 1L;
+
 	private User user;
 //	private Integer id;
 //	private String username;
 //	private String email;
 //	private String password;
 //	private String role;
-	
-	
 	
 	public MyUserDetails (User user) {
 		this.user = user;
